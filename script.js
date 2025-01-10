@@ -1,3 +1,4 @@
+
 document.getElementById("balanceForm").addEventListener("submit", function (event) {
     event.preventDefault()
     const balance = parseFloat(document.getElementById("startingBalance").value)
@@ -5,7 +6,7 @@ document.getElementById("balanceForm").addEventListener("submit", function (even
         localStorage.setItem("startingBalance", balance)
         alert(`Your starting balance is $${balance.toFixed(2)}!`)
 
-        document.querySelector(".starting-balance").style.display = "none";
+        document.querySelector(".starting-balance").style.display = "none"
     }
 })
 
@@ -23,12 +24,11 @@ document.getElementById("expenseForm").addEventListener("submit", function (even
             <td>$${expenseAmount.toFixed(2)}</td>
         `
 
-        tableBody.appendChild(newRow);
+        tableBody.appendChild(newRow)
 
-        // Update balance
-        const balance = parseFloat(localStorage.getItem("startingBalance"));
-        const newBalance = balance - expenseAmount;
-        localStorage.setItem("startingBalance", newBalance);
-        alert(`Remaining Balance: $${newBalance.toFixed(2)}`);
+        const balance = parseFloat(localStorage.getItem("startingBalance"))
+        const newBalance = balance - expenseAmount
+        localStorage.setItem("startingBalance", newBalance)
+        alert(`Remaining Balance: $${newBalance.toFixed(2)}`)
     }
-});
+})
