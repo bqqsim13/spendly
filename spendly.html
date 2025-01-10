@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spendly</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Spendly</h2>
+        <a href="#">Dashboard</a>
+        <a href="#">Add Expense</a>
+        <a href="#">View History</a>
+        <a href="#">Settings</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Welcome to Spendly!</h1>
+        </div>
+        <div class="content">
+            <h1>Get started tracking your finances.</h1>
+            <p>Choose an option from the sidebar to begin.</p>
+        </div>
+        <div class="starting-balance">
+            <h2>Set Your Starting Balance</h2>
+            <form id="balanceForm">
+                <label for="startingBalance">Enter your starting balance:</label><br>
+                <input type="number" id="startingBalance" placeholder="e.g. 500" required>
+                <button type="submit">Save Balance</button>
+            </form>
+        </div>
+
+        <div class="expense-tracker">
+            <h2>Expense Tracker</h2>
+            <form id="expenseForm">
+                <label for="expenseName">Expense Name:</label><br>
+                <input type="text" id="expenseName" placeholder="e.g., Groceries" required><br>
+        
+                <label for="expenseAmount">Amount:</label><br>
+                <input type="number" id="expenseAmount" placeholder="e.g., 50" required><br>
+        
+                <button type="submit">Add Expense</button>
+            </form>
+        
+            <table id="expenseTable">
+                <thead>
+                    <tr>
+                        <th>Expense Name</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Expenses will go here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

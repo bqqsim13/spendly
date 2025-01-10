@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    height: 100vh; 
+}
+
+
+.sidebar {
+    width: 250px; 
+    height: 100vh; 
+    background-color: #47cc4a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #3ba93c;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 250px; 
+    width: calc(100% - 250px); 
+    padding: 20px;
+}
+
+.header {
+    width: 100%;
+    padding: 15px 20px;
+    background: #ffffff;
+    color: #47cc4a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.content p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.starting-balance {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.starting-balance form {
+    display: inline-block;
+    text-align: left;
+}
+
+.starting-balance input {
+    padding: 10px;
+    width: 200px;
+    margin: 10px 0;
+}
+
+.starting-balance button {
+    padding: 10px 20px;
+    background-color: #47cc4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.starting-balance button:hover {
+    background-color: #3ba93c;
+}
+
+.expense-tracker {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#expenseForm {
+    margin-bottom: 20px;
+}
+
+#expenseForm input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 200px;
+}
+
+#expenseForm button {
+    padding: 10px 20px;
+    background-color: #47cc4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#expenseForm button:hover {
+    background-color: #3ba93c;
+}
+
+#expenseTable {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+#expenseTable th,
+#expenseTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#expenseTable th {
+    background-color: #47cc4a;
+    color: white;
+}
