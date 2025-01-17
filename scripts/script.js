@@ -36,7 +36,7 @@ document.getElementById("expenseForm").addEventListener("submit", function (even
             <td>$${newBalance.toFixed(2)}</td>
         `
 
-        tableBody.appendChild(newRow)
+        tableBody.prepend(newRow)
 
         alert(`Remaining Balance: $${newBalance.toFixed(2)}`)
     }
