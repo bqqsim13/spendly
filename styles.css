@@ -116,8 +116,7 @@ body {
 }
 
 .expense-tracker {
-    text-align: center;
-    margin-top: 30px;
+    display: none;
 }
 
 #expenseForm {
