@@ -40,7 +40,5 @@ document.getElementById("expenseForm").addEventListener("submit", function (even
         tableBody.prepend(newRow)
 
         alert(`Remaining Balance: $${newBalance.toFixed(2)}`)
-    } else {
-        alert("Please fill out all fields correctly.")
-    }
+    } 
 })
