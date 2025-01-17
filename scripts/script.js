@@ -17,13 +17,13 @@ document.getElementById("balanceForm").addEventListener("submit", function (even
 document.getElementById("expenseForm").addEventListener("submit", function (event) {
     event.preventDefault() 
 
+    const balance = parseFloat(localStorage.getItem("startingBalance"))
     const expenseName = document.getElementById("expenseName").value
     const expenseAmount = parseFloat(document.getElementById("expenseAmount").value)
 
-    let balance = parseFloat(localStorage.getItem("startingBalance"))
-
     if (expenseName && !isNaN(expenseAmount) && !isNaN(balance)) {
         const newBalance = balance - expenseAmount
+        const currentDate = new Date().toLocaleDateString()
 
         localStorage.setItem("startingBalance", newBalance)
 
@@ -31,6 +31,7 @@ document.getElementById("expenseForm").addEventListener("submit", function (even
         const newRow = document.createElement("tr")
 
         newRow.innerHTML = `
+            <td>${currentDate}</td>
             <td>${expenseName}</td>
             <td>$${expenseAmount.toFixed(2)}</td>
             <td>$${newBalance.toFixed(2)}</td>
@@ -39,5 +40,7 @@ document.getElementById("expenseForm").addEventListener("submit", function (even
         tableBody.prepend(newRow)
 
         alert(`Remaining Balance: $${newBalance.toFixed(2)}`)
+    } else {
+        alert("Please fill out all fields correctly.")
     }
 })
